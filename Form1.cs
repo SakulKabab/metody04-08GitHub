@@ -16,5 +16,12 @@ namespace metody04_08GitHub
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int x = int.Parse(textBoxX.Text), y = int.Parse(textBoxY.Text);
+            string vysledek = CelaCisla.Mocnina(x, y);
+            MessageBox.Show(x + "^" + y + " = " + vysledek);
+        }
     }
 }
