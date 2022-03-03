@@ -34,5 +34,53 @@ namespace metody04_08GitHub
             }
             return vysledek;
         }
+        public static int Faktorial(int x)
+        {
+            int vysledek = 1;
+            if (x >= 0)
+            {
+                for (int i = 1; i <= x; ++i)
+                {
+                    vysledek *= i;
+                }
+            }
+            return vysledek;
+        }
+        public static int LichCifSoucet(int x)
+        {
+            int soucet = 0;
+            while (x > 0)
+            {
+                int cifra = x % 10;
+                if (cifra % 2 != 0)
+                {
+                    soucet += cifra;
+                }
+                x = x / 10;
+            }
+            return soucet;
+        }
+        public static bool JePrvocislo(int x)
+        {
+            bool jePrvocislo = x != 1;
+            for (int delitel = 2; delitel <= Math.Sqrt(x) && jePrvocislo; ++delitel)
+            {
+                if (x % delitel == 0) jePrvocislo = false;
+            }
+            return jePrvocislo;
+        }
+        public static int PocSudDel(int x)
+        {
+            int pocSudDel = 0;
+            for (int i = 1; i <= x; ++i)
+            {
+                if (x % i == 0)
+                {
+                    if (i % 2 == 0) ++pocSudDel;
+                }
+            }
+
+            return pocSudDel;
+        }
     }
 }
